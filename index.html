@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<!-- displays site properly based on user's device -->
+
+		<link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png" />
+		<link rel="stylesheet" href="style.css" />
+
+		<title>Frontend Mentor | Expenses chart component</title>
+
+		<!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+		<style>
+			.attribution {
+				font-size: 11px;
+				text-align: center;
+			}
+			.attribution a {
+				color: hsl(228, 45%, 44%);
+			}
+		</style>
+	</head>
+	<body>
+		<div class="container">
+			<header>
+				<div id="header-text">
+					<h5>My balance</h5>
+					<h3>$921.48</h3>
+					<!-- Use JS to calculate this with data.json later -->
+				</div>
+				<img src="images/logo.svg" alt="" />
+			</header>
+
+			<div id="main-content">
+				<h2>Spending - Last 7 days</h2>
+				<div id="chart">
+					<div id="monday" class="chart-column">
+						<!-- Used a wierd order so that the ~ css concaction works to show the daily spending, order was later fixed with order: css property -->
+						<div class="bar" id="bar-mon"></div>
+						<h3 id="mon-value" class="bar-value"></h3>
+						<h5 class="day" id="label-mon">mon</h5>
+					</div>
+
+					<div id="teusday" class="chart-column">
+						<div class="bar" id="bar-tue"></div>
+						<h3 id="tue-value" class="bar-value"></h3>
+						<h5 class="day" id="label-tue">tue</h5>
+					</div>
+
+					<div id="wednesday" class="chart-column">
+						<div class="bar" id="bar-wed"></div>
+						<h3 id="wed-value" class="bar-value"></h3>
+						<h5 class="day" id="label-wed">wed</h5>
+					</div>
+
+					<div id="thursday" class="chart-column">
+						<div class="bar" id="bar-thu"></div>
+						<h3 id="thu-value" class="bar-value"></h3>
+						<h5 class="day" id="label-thu">thu</h5>
+					</div>
+
+					<div id="friday" class="chart-column">
+						<div class="bar" id="bar-fri"></div>
+						<h3 id="fri-value" class="bar-value"></h3>
+						<h5 class="day" id="label-fri">fri</h5>
+					</div>
+
+					<div id="saturday" class="chart-column">
+						<div class="bar" id="bar-sat"></div>
+						<h3 id="sat-value" class="bar-value"></h3>
+						<h5 class="day" id="label-sat">sat</h5>
+					</div>
+
+					<div id="sunday" class="chart-column">
+						<div class="bar" id="bar-sun"></div>
+						<h3 id="sun-value" class="bar-value"></h3>
+						<h5 class="day" id="label-sun">sun</h5>
+					</div>
+				</div>
+
+				<svg height="5" width="100%">
+					<line
+						id="divider-line"
+						x1="5%"
+						y1="2"
+						x2="95%"
+						y2="2"
+						style="stroke: hsla(60, 2%, 62%, 0.358); stroke-width: 2"
+					/>
+				</svg>
+
+				<div id="total">
+					<div id="left-total">
+						<h3>Total this month</h3>
+						<h1 id="total-spending">$478.33</h1>
+						<!-- Calculate this with JS later -->
+					</div>
+
+					<div id="right-total">
+						<h2>+2.4%</h2>
+						<h3>from last month</h3>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- CONTAINER -->
+	</body>
+
+	<script type="text/javascript" src="data.js"></script>
+	<script type="text/javascript" src="index.js"></script>
+</html>
