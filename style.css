@@ -89,15 +89,17 @@ header h5 {
 
 .bar-value {
 	order: 1;
-	width: 110%;
 	visibility: hidden;
 	font-size: 60%;
-	text-align: center;
 	background-color: hsl(25, 47%, 15%);
 	color: white;
 	padding: 10px;
 	margin: 5px auto;
 	border-radius: 5px;
+	transform: scale(110%);
+	transform: translateX(-9%);
+	font-size: 12px;
+	text-align: left;
 }
 
 .bar {
